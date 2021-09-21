@@ -20,6 +20,7 @@
         box-sizing: border-box;
       }
       body {
+        font-family: "Red Hat Display", "Roboto";
         background-image: url("./images/pattern-background-mobile.svg");
         background-repeat: no-repeat;
         background-size: 100%;
@@ -27,23 +28,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "Red Hat Display", "Roboto";
+        height: 100vh;
+        margin: 0;
+        padding: 0;
         letter-spacing: 0.7px;
+        line-height: 25px;
       }
       .card {
+        text-align: center;
         background-color: white;
         border-radius: 0 0 25px 25px;
         padding: 0 10px;
         max-width: 450px;
-        margin-bottom: 25px;
+        box-shadow: 0 34px 25px 0 hsl(225deg 100% 87% / 50%),
+          0 6px 12px 0 hsl(223deg 85% 87%);
       }
       .container {
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 0 10px;
+        padding: 0;
         min-width: 320px;
       }
       .hero-img {
@@ -63,15 +68,14 @@
         height: auto;
       }
       .info {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
+        margin-top: 2rem;
       }
       .info h2 {
-        padding-top: 3rem;
         font-weight: 900;
         font-size: 28px;
+      }
+      .info > p {
+        color: hsl(224, 23%, 55%);
       }
       .plan {
         display: flex;
@@ -151,33 +155,46 @@
         display: block;
         position: relative;
         bottom: 0;
+        padding-top: 25px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      @media (min-width: 375px) {
-        body {
-          background-image: url("./images/pattern-background-desktop.svg");
+      @media (max-width: 600px) {
+        .container {
+          width: 325px;
         }
-        .info p {
-          padding: 1rem 3rem;
+        .card {
+          width: 325px;
         }
-      }
-      @media (max-width: 450px) {
-        /* .info p { */
-        .plan p {
-          padding: 1rem 3rem;
+        .info h2 {
+          font-size: 22px;
         }
-      }
-      @media (max-width: 430px) {
         .info > p {
+          font-size: 15px;
           padding: 1rem 1rem;
         }
         .plan {
-          margin: 1rem 2rem;
+          margin: 0.3rem 1rem 1.6rem 1rem;
+        }
+        .plan-info img {
+          margin-right: 13px;
         }
         .buttons {
-          margin: 1rem 2rem;
+          margin: 1rem 1rem;
+        }
+      }
+      @media (min-width: 375px) {
+        .info > p {
+          padding: 1rem 1rem;
+        }
+      }
+      @media (min-width: 600px) {
+        .info > p {
+          padding: 1rem 2rem;
+        }
+        body {
+          background-image: url("./images/pattern-background-desktop.svg");
         }
       }
     </style>
@@ -194,25 +211,28 @@
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
-          <div class="plan">
-            <img src="images/icon-music.svg" alt="" />
-            <div class="plan-type-price">
-              <h4>Annual Plan</h4>
-              <p>$59.99/year</p>
-            </div>
-            <a href="#"> Change </a>
+        </div>
+        <div class="plan">
+          <img src="images/icon-music.svg" alt="" />
+          <div class="plan-type-price">
+            <h4>Annual Plan</h4>
+            <p>$59.99/year</p>
           </div>
-          <div class="buttons">
-            <button class="payment-btn">Proceed to Payment</button>
-            <button class="cancel-btn">Cancel Order</button>
-          </div>
+          <a href="#"> Change </a>
+        </div>
+        <div class="buttons">
+          <button class="payment-btn">Proceed to Payment</button>
+          <button class="cancel-btn">Cancel Order</button>
         </div>
       </div>
       <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Dmitriy</a>
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >.
+        </p>
+        <p>Coded by <a href="#">Dmitriy</a></p>
       </div>
     </div>
   </body>
