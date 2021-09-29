@@ -55,7 +55,7 @@ body {
   height: auto;
 }
 .info {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 .info h2 {
   font-weight: 900;
